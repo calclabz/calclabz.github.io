@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>YouTube Money Calculator – Estimate Earnings by Niche & Country</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description"
+        content="Use our free YouTube Money Calculator to estimate your earnings based on views, CPM and monetized percentage. Find out how much YouTube pays per 1000 views.">
+    <meta property="og:title" content="YouTube Money Calculator – Estimate Your Earnings">
+    <meta property="og:description" content="Calculate how much you can earn from YouTube ads instantly.">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "YouTube Money Calculator",
+        "description": "Calculate YouTube earnings by views, niche and country",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All"
+    }
+    </script>
+</head>
+
+<body>
+    
+    <div class="logo">
+        <span class="logo-calc">Calc</span><span class="logo-labz">Labz</span>
+    </div>
+
+    
+    <div class="container">
+        <h1>YouTube Money Calculator</h1><br>
+        <p class="subtitle">Estimate your monthly YouTube earnings instantly</p>
+
+        <div class="form-group">
+            <label for="views">Monthly Views:</label>
+            <input type="number" id="views" placeholder="e.g. 100000" min="0" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="customRpm">Custom RPM (Optional):</label>
+            <input type="number" id="customRpm" placeholder="Leave empty for estimated RPM" min="0" step="0.01"
+                autocomplete="off">
+            <small class="hint">Enter your actual RPM from YouTube Studio for batter calculation</small>
+        </div>
+
+        <div class="form-group">
+            <label for="niche">Content Category:</label>
+            <select id="niche" autocomplete="off">
+                <option value="gaming">Gaming</option>
+                <option value="technology">Technology</option>
+                <option value="education">Education</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="music">Music</option>
+                <option value="sports">Sports</option>
+                <option value="fashion">Fashion & Beauty</option>
+                <option value="food">Food</option>
+                <option value="cooking">Cooking</option>
+                <option value="travel">Travel</option>
+                <option value="finance">Finance</option>
+                <option value="health">Health & Fitness</option>
+                <option value="diy">DIY & Crafts</option>
+                <option value="news">News & Politics</option>
+                <option value="comedy">Comedy</option>
+                <option value="animation">Animation</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Audience Country:</label>
+            <select id="country" autocomplete="off">
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="canada">Canada</option>
+                <option value="india">India</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="format">Video Type:</label>
+            <select id="format" autocomplete="off">
+                <option value="long">Long Video</option>
+                <option value="shorts">YouTube Shorts</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Earnings Period:</label>
+            <div class="toggle-group">
+                <button class="toggle-btn active" id="monthlyBtn" onclick="setPeriod('monthly')">Monthly</button>
+                <button class="toggle-btn" id="annualBtn" onclick="setPeriod('annual')">Annual</button>
+            </div>
+        </div>
+
+        <button onclick="calculateIncome().catch(console.error)">Calculate Earnings</button>
+
+        <div id="result-box" class="result-box hidden">
+            <p class="result-label">Estimated Monthly Income</p>
+            <h2 id="result"></h2>
+            <p id="rpm-info" class="rpm-info"></p>
+        </div>
+
+    </div>
+
+
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                How much does YouTube pay per 1000 views?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>YouTube pays between $1 to $20 per 1000 views depending on your niche, audience country, and video
+                    type. Finance and technology channels earn the most.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                How much do Indian YouTubers earn?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Indian YouTubers typically earn 7-10x less than US creators due to lower CPM rates. A channel with 1
+                    million views can expect ₹3,000 – ₹15,000 per month.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Do YouTube Shorts pay less than long videos?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, YouTube Shorts earn around 10% of what long-form videos earn per view, as ad revenue is shared
+                    across the Shorts feed differently.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Which YouTube niche pays the most?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Finance, technology, and education niches have the highest RPM rates, often between $10–$25 per 1000
+                    views for US audiences.</p>
+            </div>
+        </div>
+
+    </div>
+    <footer class="site-footer">
+        <a href="about.html">About</a> |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="mailto:calclabz@gmail.com">Contact</a>
+    </footer>
+
+    <script src="calculateIncome.js"></script>
+</body>
+
+</html>
