@@ -6,54 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <title>YouTube Channel Earning Calculator India – Check YouTube Earnings | CalcLabz</title>
     <link rel="stylesheet" href="style.css">
 
-    <meta name="description"
-        content="Use our free YouTube Money Calculator to estimate your earnings based on views, CPM and monetized percentage. Find out how much YouTube pays per 1000 views.">
-    <meta property="og:title" content="YouTube Money Calculator – Estimate Your Earnings">
-    <meta property="og:description" content="Calculate how much you can earn from YouTube ads instantly.">
+    <meta name="description" content="Free YouTube Channel Earning Calculator for India. Calculate your YouTube earnings in rupees by niche, views, and country. Find out YouTube RPM rates India 2026.">
+    <meta property="og:title" content="YouTube Channel Earning Calculator India | CalcLabz">
+    <meta property="og:description" content="Calculate how much you can earn from YouTube ads instantly. Free tool for Indian creators.">
     <meta property="og:type" content="website">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "YouTube Money Calculator",
-        "description": "Calculate YouTube earnings by views, niche and country",
+        "name": "YouTube Channel Earning Calculator",
+        "description": "Calculate YouTube earnings by views, niche and country for Indian creators",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "All"
     }
     </script>
+
+    <!-- Google Analytics -->
+    <!-- Yahan apna Google Analytics code rakho -->
+
 </head>
 
 <body>
 
     <nav class="navbar">
-    <div class="nav-logo">
-        <a href="index.html" style="text-decoration:none;">
-            <span class="logo-calc">Calc</span><span class="logo-labz">Labz</span>
-        </a>
-    </div>
-    <div class="nav-links">
-        <a href="index.html" class="active">Calculator</a>
-        <a href="blogs.html">Blogs <span class="blog-count">1</span></a>
-        <a href="about.html">About</a>
-    </div>
-</nav>
+        <div class="nav-logo">
+            <a href="index.html" style="text-decoration:none;">
+                <span class="logo-calc">Calc</span><span class="logo-labz">Labz</span>
+            </a>
+        </div>
 
-   
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="active">Calculator</a>
+            <a href="blogs.html">Blogs <span class="blog-count">1</span></a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
 
     <div class="hero">
         <h2>Free Tools for YouTube Creators</h2>
         <p>Calculate earnings, plan content, and grow your channel with CalcLabz</p>
     </div>
 
-
     <div class="container">
-        <h1>YouTube Money Calculator</h1><br>
+        <h1>YouTube Money Calculator</h1>
         <p class="subtitle">Estimate your monthly YouTube earnings instantly</p>
 
         <div class="form-group">
@@ -63,9 +70,8 @@
 
         <div class="form-group">
             <label for="customRpm">Custom RPM (Optional):</label>
-            <input type="number" id="customRpm" placeholder="Leave empty for estimated RPM" min="0" step="0.01"
-                autocomplete="off">
-            <small class="hint">Enter your actual RPM from YouTube Studio for batter calculation</small>
+            <input type="number" id="customRpm" placeholder="Leave empty for estimated RPM" min="0" step="0.01" autocomplete="off">
+            <small class="hint">Enter your actual RPM from YouTube Studio for better calculation</small>
         </div>
 
         <div class="form-group">
@@ -91,7 +97,7 @@
         </div>
 
         <div class="form-group">
-            <label for="country">Audience Country:</label>
+            <label for="country">Where are your viewers from?</label>
             <select id="country" autocomplete="off">
                 <option value="usa">USA</option>
                 <option value="uk">UK</option>
@@ -126,21 +132,18 @@
 
     </div>
 
-
     <!-- Blog Section -->
     <div class="blog-section">
         <h2>Latest Articles</h2>
         <div class="blog-card">
-            <div class="blog-card-content">
-                <span class="blog-tag">YouTube Earnings</span>
-                <h3>How Much Does YouTube Pay Per 1000 Views in India in 2026?</h3>
-                <p>Find out how much Indian YouTubers earn, RPM rates by niche, and tips to increase your revenue.</p>
-                <a href="youtube-earnings-india-2026.html">Read Article →</a>
-            </div>
+            <span class="blog-tag">YouTube Earnings</span>
+            <h3>How Much Does YouTube Pay Per 1000 Views in India in 2026?</h3>
+            <p>Find out how much Indian YouTubers earn, RPM rates by niche, and tips to increase your revenue.</p>
+            <a href="youtube-earnings-india-2026.html">Read Article →</a>
         </div>
     </div>
 
-
+    <!-- FAQ Section -->
     <div class="faq-container">
         <h2>Frequently Asked Questions</h2>
 
@@ -150,8 +153,7 @@
                 <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-                <p>YouTube pays between $1 to $20 per 1000 views depending on your niche, audience country, and video
-                    type. Finance and technology channels earn the most.</p>
+                <p>YouTube pays between $1 to $20 per 1000 views depending on your niche, audience country, and video type. Finance and technology channels earn the most.</p>
             </div>
         </div>
 
@@ -161,8 +163,7 @@
                 <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-                <p>Indian YouTubers typically earn 7-10x less than US creators due to lower CPM rates. A channel with 1
-                    million views can expect ₹3,000 – ₹15,000 per month.</p>
+                <p>Indian YouTubers typically earn 7-10x less than US creators due to lower CPM rates. A channel with 1 million views can expect ₹3,000 – ₹15,000 per month.</p>
             </div>
         </div>
 
@@ -172,8 +173,7 @@
                 <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-                <p>Yes, YouTube Shorts earn around 10% of what long-form videos earn per view, as ad revenue is shared
-                    across the Shorts feed differently.</p>
+                <p>Yes, YouTube Shorts earn around 10% of what long-form videos earn per view, as ad revenue is shared across the Shorts feed differently.</p>
             </div>
         </div>
 
@@ -183,12 +183,12 @@
                 <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
-                <p>Finance, technology, and education niches have the highest RPM rates, often between $10–$25 per 1000
-                    views for US audiences.</p>
+                <p>Finance, technology, and education niches have the highest RPM rates, often between $10–$25 per 1000 views for US audiences.</p>
             </div>
         </div>
 
     </div>
+
     <footer class="site-footer">
         <a href="about.html">About</a> |
         <a href="privacy-policy.html">Privacy Policy</a> |
