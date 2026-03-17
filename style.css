@@ -15,11 +15,18 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 70px 0 20px 0; /* top padding add kiya - logo ke liye space */
+    padding: 70px 0 20px 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    animation: fadeIn 0.3s ease-in;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -53,22 +60,22 @@ body {
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
     font-weight: 600;
-    transition: 0.3s ease; /* ✅ smooth transition */
+    transition: 0.3s ease;
     display: flex;
     align-items: center;
     gap: 5px;
     padding-bottom: 2px;
-    border-bottom: 2px solid transparent; /* ✅ invisible border */
+    border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover {
     color: white;
-    border-bottom: 2px solid rgba(255,107,53,0.5); /* ✅ hover pe half orange */
+    border-bottom: 2px solid rgba(255,107,53,0.5);
 }
 
 .nav-links a.active {
     color: white;
-    border-bottom: 2px solid #ff6b35; /* ✅ active pe full orange */
+    border-bottom: 2px solid #ff6b35;
 }
 
 .blog-count {
@@ -82,23 +89,94 @@ body {
     justify-content: center;
     font-size: 10px;
 }
-/*logo*/
 
-.logo {
-    position:absolute;
-    top: 20px;
-    left: 30px;
-    font-size: 35px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
+/* Logo colors */
 .logo-calc {
     color: #ff6b35;
 }
 
 .logo-labz {
     color: white;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    padding: 5px;
+    margin: 0;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.hamburger:hover span {
+    background: #ff6b35;
+}
+
+.hamburger:hover span:nth-child(1) {
+    transform: translateX(4px);
+}
+
+.hamburger:hover span:nth-child(3) {
+    transform: translateX(-4px);
+}
+
+/* Open state - X shape */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background: #ff6b35;
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background: #ff6b35;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background: rgba(30, 60, 114, 0.98);
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 25px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
 }
 
 /* Heading */
@@ -116,6 +194,7 @@ h1 {
     margin-top: -10px;
 }
 
+/* Hero */
 .hero {
     text-align: center;
     padding: 20px 0 10px 0;
@@ -190,7 +269,8 @@ select:focus {
     margin-top: 3px;
     display: block;
 }
-/* button */
+
+/* Button */
 button {
     background: #2a5298;
     color: white;
@@ -260,13 +340,6 @@ button:hover {
     margin: 0 0 5px 0;
 }
 
-
-.rpm-info {
-    font-size: 12px;
-    color: #888;
-    margin: 5px 0 0 0;
-}
-
 #result {
     margin: 0;
     font-size: 20px;
@@ -276,6 +349,13 @@ button:hover {
     letter-spacing: 0.5px;
 }
 
+.rpm-info {
+    font-size: 12px;
+    color: #888;
+    margin: 5px 0 0 0;
+}
+
+/* Blog Section */
 .blog-section {
     max-width: 420px;
     width: 90%;
@@ -338,9 +418,7 @@ button:hover {
     color: white;
 }
 
-
-
-/* faq Section */
+/* FAQ Section */
 .faq-container {
     max-width: 420px;
     width: 90%;
@@ -409,7 +487,7 @@ button:hover {
     transform: rotate(45deg);
 }
 
-/*about content*/
+/* About Content */
 .about-content {
     text-align: left;
     margin-top: 15px;
@@ -440,7 +518,8 @@ button:hover {
 .back-link:hover {
     color: #1e3c72;
 }
-/*footer*/
+
+/* Footer */
 .site-footer {
     color: rgba(255,255,255,0.7);
     font-size: 12px;
@@ -457,12 +536,6 @@ button:hover {
 .site-footer a:hover {
     color: white;
 }
-
-/* Page fade in animation */
-body {
-    animation: fadeIn 0.3s ease-in;
-}
-
 
 /* Responsive */
 @media (max-width: 400px) {
