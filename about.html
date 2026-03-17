@@ -10,6 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Navbar add karo yahan -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="index.html" style="text-decoration:none;">
+                <span class="logo-calc">Calc</span><span class="logo-labz">Labz</span>
+            </a>
+        </div>
+
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Calculator</a>
+            <a href="blogs.html">Blogs <span class="blog-count">1</span></a>
+            <a href="about.html" class="active">About</a>
+        </div>
+    </nav>
     <div class="container">
         <h1>About CalcLabz</h1>
         <p class="subtitle">Free tools for content creators</p>
@@ -29,5 +50,7 @@
 
         <a href="index.html" class="back-link">← Back to Calculator</a>
     </div>
+
+    <script src="navbar.js"></script>
 </body>
 </html>
