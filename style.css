@@ -19,6 +19,69 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(30, 60, 114, 0.95);
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+.nav-logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s ease; /* ✅ smooth transition */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent; /* ✅ invisible border */
+}
+
+.nav-links a:hover {
+    color: white;
+    border-bottom: 2px solid rgba(255,107,53,0.5); /* ✅ hover pe half orange */
+}
+
+.nav-links a.active {
+    color: white;
+    border-bottom: 2px solid #ff6b35; /* ✅ active pe full orange */
+}
+
+.blog-count {
+    background: #ff6b35;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
 /*logo*/
 
 .logo {
@@ -53,9 +116,30 @@ h1 {
     margin-top: -10px;
 }
 
+.hero {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    width: 420px;
+    max-width: 90%;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.hero p {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    margin: 0;
+}
+
 /* Card container */
 .container {
     background: #f3f3f3;
+    margin-top: 80px;
     padding: 30px 25px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -192,6 +276,68 @@ button:hover {
     letter-spacing: 0.5px;
 }
 
+.blog-section {
+    max-width: 420px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.blog-section h2 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.blog-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 12px;
+    transition: 0.2s;
+}
+
+.blog-card:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.blog-tag {
+    background: #ff6b35;
+    color: white;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.blog-card h3 {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0 8px 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+.blog-card p {
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.blog-card a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+}
+
+.blog-card a:hover {
+    color: white;
+}
+
 
 
 /* faq Section */
@@ -311,6 +457,12 @@ button:hover {
 .site-footer a:hover {
     color: white;
 }
+
+/* Page fade in animation */
+body {
+    animation: fadeIn 0.3s ease-in;
+}
+
 
 /* Responsive */
 @media (max-width: 400px) {
