@@ -109,6 +109,13 @@ function animateCounter(element, start, end, duration, prefix) {
     requestAnimationFrame(update);
 }
 
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    const hamburger = document.getElementById("hamburger");
+    navLinks.classList.toggle("open");
+    hamburger.classList.toggle("open");
+}
+
 function toggleFAQ(btn) {
     const item = btn.parentElement;
     item.classList.toggle("active");
