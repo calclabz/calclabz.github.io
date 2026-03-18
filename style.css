@@ -89,6 +89,61 @@ body {
     justify-content: center;
     font-size: 10px;
 }
+/*Tools Drop down*/
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.dropdown-toggle:hover {
+    color: white;
+    border-bottom: 2px solid rgba(255,107,53,0.5);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(30,60,114,0.98);
+    border-radius: 8px;
+    padding: 8px 0;
+    min-width: 200px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 200;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: rgba(255,255,255,0.8) !important;
+    font-size: 12px !important;
+    border-bottom: none !important;
+    transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
 
 /* Logo colors */
 .logo-calc {
@@ -155,6 +210,18 @@ body {
 @media (max-width: 480px) {
     .hamburger {
         display: flex;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: rgba(255,255,255,0.05);
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .dropdown-menu a {
+        padding-left: 35px !important;
     }
 
     .nav-links {
