@@ -115,9 +115,10 @@ body {
     display: none;
     position: absolute;
     top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(30,60,114,0.98);
+    left: auto;
+    right: 10px;
+    transform: none;
+    background: white;
     border-radius: 8px;
     padding: 8px 0;
     min-width: 200px;
@@ -128,14 +129,14 @@ body {
 .dropdown-menu a {
     display: block;
     padding: 10px 15px;
-    color: rgba(255,255,255,0.8) !important;
-    font-size: 12px !important;
+    color: rgba(30, 60, 114, 0.95) !important;
+    font-size: 14px !important;
     border-bottom: none !important;
     transition: 0.2s;
 }
 
 .dropdown-menu a:hover {
-    background: rgba(255,255,255,0.1);
+    background: #ff6b35;
     color: white !important;
 }
 
