@@ -425,6 +425,70 @@ button:hover {
     margin: 5px 0 0 0;
 }
 
+/* Tools asection */
+.tools-section {
+    max-width: 420px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.tools-section h2 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.tools-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 12px;
+    transition: 0.2s;
+}
+
+.tools-card:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.tools-tag {
+    background: #ff6b35;
+    color: white;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.tools-card h3 {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0 8px 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+.tools-card p {
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.tools-card a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+}
+
+.tools-card a:hover {
+    color: white;
+}
+
+
 /* Blog Section */
 .blog-section {
     max-width: 420px;
@@ -470,7 +534,7 @@ button:hover {
 
 .blog-card p {
     color: rgba(255,255,255,0.75);
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 12px;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -479,7 +543,7 @@ button:hover {
 .blog-card a {
     color: #ff6b35;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
 }
