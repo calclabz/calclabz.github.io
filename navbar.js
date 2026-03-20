@@ -15,3 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 })
+
+// Auto blog count
+document.addEventListener('DOMContentLoaded', function() {
+    const blogs = [
+        'youtube-earnings-india-2026.html',
+        'Blogs/how-to-download-youtube-thumbnail/',
+        'Blogs/youtube-thumbnail-size-guide/'
+    ];
+    
+    const blogCountEl = document.querySelector('.blog-count');
+    if (blogCountEl) {
+        blogCountEl.innerText = blogs.length;
+    }
+});
