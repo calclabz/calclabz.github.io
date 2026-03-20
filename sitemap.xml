@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://calclabz.github.io/</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>1.00</priority>
-  </url>
-
-  <url>
-  
-    <loc>https://calclabz.github.io/youtube-thumbnail-downloader/</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://calclabz.github.io/blogs/</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://calclabz.github.io/about/</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://calclabz.github.io/youtube-earnings-india-2026/</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://calclabz.github.io/privacy-policy/</loc>
-    <lastmod>2026-03-18</lastmod>
-    <priority>0.80</priority>
-  </url>
+<url>
+  <loc>https://calclabz.github.io/</loc>
+  <lastmod>2026-03-20</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://calclabz.github.io/blogs.html</loc>
+  <lastmod>2026-03-20</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calclabz.github.io/about.html</loc>
+  <lastmod>2026-03-20</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calclabz.github.io/privacy-policy.html</loc>
+  <lastmod>2026-03-20</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calclabz.github.io/YouTube-Earning-Calculator/</loc>
+  <lastmod>2026-03-20</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://calclabz.github.io/youtube-thumbnail-downloader/</loc>
+  <lastmod>2026-03-20</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calclabz.github.io/Blogs/how-to-download-youtube-thumbnail/</loc>
+  <lastmod>2026-03-20</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://calclabz.github.io/youtube-earnings-india-2026.html</loc>
+  <lastmod>2026-03-20</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>
