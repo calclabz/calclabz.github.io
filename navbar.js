@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const blogs = [
         'youtube-earnings-india-2026.html',
         'Blogs/how-to-download-youtube-thumbnail/',
-        'Blogs/youtube-thumbnail-size-guide/'
+        'Blogs/youtube-thumbnail-size-guide/',
+        'Blogs/5-Best-YouTube-Thumbnail-Tips-to-Increase-Clicks-(CTR)-in-2026'
     ];
     
     const blogCountEl = document.querySelector('.blog-count');
