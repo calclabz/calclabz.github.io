@@ -4,37 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - CalcLabz</title>
+
+    <!-- SEO -->
+    <meta name="description" content="CalcLabz is a free online calculator platform for content creators. We help YouTubers estimate earnings using real RPM data across niches and countries.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://calclabz.github.io/about.html">
+
+    <!-- OG Tags -->
+    <meta property="og:title" content="About Us - CalcLabz">
+    <meta property="og:description" content="Free tools for YouTube creators. Estimate earnings instantly with real RPM data.">
+    <meta property="og:url" content="https://calclabz.github.io/about.html">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="CalcLabz" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- GA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EV5J5ER7ZR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EV5J5ER7ZR');
+    </script>
+
 </head>
 <body>
 
-    <!-- Navbar add karo yahan -->
     <nav class="navbar">
         <div class="nav-logo">
-            <a href="index.html" style="text-decoration:none;">
+            <a href="/" style="text-decoration:none;">
                 <span class="logo-calc">Calc</span><span class="logo-labz">Labz</span>
             </a>
         </div>
-
         <button class="hamburger" onclick="toggleMenu()" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </button>
-
         <div class="nav-links" id="navLinks">
-           <a href="#" class="dropdown-toggle">Tools ▾</a>
-            <div class="dropdown-menu">
-                 <a href="index.html">💰Youtube Earning Calculator</a>
-                 <a href="/youtube-thumbnail-downloader/">🖼️YoutubeThumbnail Downloader</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Tools ▾</a>
+                <div class="dropdown-menu">
+                    <a href="/">💰 Youtube Earning Calculator</a>
+                    <a href="/youtube-thumbnail-downloader/">🖼️ Youtube Thumbnail Downloader</a>
+                </div>
             </div>
-            <a href="blogs.html">Blogs <span class="blog-count">1</span></a>
-            <a href="about.html" class="active">About</a>
+            <a href="/blogs.html">Blogs <span class="blog-count">3</span></a>
+            <a href="/about.html" class="active">About</a>
         </div>
     </nav>
+
     <div class="container">
         <h1>About CalcLabz</h1>
         <p class="subtitle">Free tools for content creators</p>
@@ -52,9 +85,9 @@
             <p>📧 <a href="mailto:calclabz@gmail.com">calclabz@gmail.com</a></p>
         </div>
 
-        <a href="index.html" class="back-link">← Back to Calculator</a>
+        <a href="/" class="back-link">← Back to Calculator</a>
     </div>
 
-    <script src="navbar.js"></script>
+    <script src="/navbar.js"></script>
 </body>
 </html>

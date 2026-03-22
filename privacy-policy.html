@@ -5,28 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - CalcLabz</title>
+
+    <!-- SEO -->
+    <meta name="description" content="CalcLabz Privacy Policy. We do not collect personal data. All calculations are done locally in your browser.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://calclabz.github.io/privacy-policy.html">
+
+    <!-- OG Tags -->
+    <meta property="og:title" content="Privacy Policy - CalcLabz">
+    <meta property="og:url" content="https://calclabz.github.io/privacy-policy.html">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="CalcLabz" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- GA -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EV5J5ER7ZR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EV5J5ER7ZR');
+    </script>
+
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="/" style="text-decoration:none;">
+                <span class="logo-calc">Calc</span><span class="logo-labz">Labz</span>
+            </a>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Tools ▾</a>
+                <div class="dropdown-menu">
+                    <a href="/">💰 Youtube Earning Calculator</a>
+                    <a href="/youtube-thumbnail-downloader/">🖼️ Youtube Thumbnail Downloader</a>
+                </div>
+            </div>
+            <a href="/blogs.html">Blogs <span class="blog-count">3</span></a>
+            <a href="/about.html">About</a>
+        </div>
+    </nav>
+
     <div class="container" style="max-width: 600px; text-align: left;">
         <h1>Privacy Policy</h1>
         <p class="subtitle">Last updated: March 2026</p>
 
         <div class="about-content">
             <h2>Information We Collect</h2>
-            <p>CalcLabz does not collect any personal information. All calculations are done locally in your browser.
-            </p>
+            <p>CalcLabz does not collect any personal information. All calculations are done locally in your browser.</p>
 
             <h2>Cookies</h2>
             <p>We may use cookies to improve your experience. No personal data is stored or shared.</p>
@@ -44,8 +93,10 @@
             <p>For any privacy concerns, contact us at: <a href="mailto:calclabz@gmail.com">calclabz@gmail.com</a></p>
         </div>
 
-        <a href="/index.html" class="back-link">← Back to Calculator</a>
+        <a href="/" class="back-link">← Back to Calculator</a>
     </div>
+
+    <script src="/navbar.js"></script>
 </body>
 
 </html>
