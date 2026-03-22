@@ -738,9 +738,9 @@
                 const item = document.createElement('div');
                 item.className = 'bulk-item';
                 item.innerHTML = `
-                    <img src="https://img.youtube.com/vi/${id}/hqdefault.jpg"
-                         alt="YouTube Thumbnail ${id}"
-                         onerror="this.src='https://img.youtube.com/vi/${id}/mqdefault.jpg'">
+                    <img src="https://img.youtube.com/vi/${id}/maxresdefault.jpg"
+                        alt="YouTube Thumbnail ${id}"
+                        onerror="this.src='https://img.youtube.com/vi/${id}/hqdefault.jpg'">
                     <div class="bulk-item-title">Video ID: ${id}</div>
                     <div class="bulk-download-btns">
                         <button class="bulk-dl-btn hd" onclick="bulkDownload('${id}','maxresdefault')">⬇️ HD</button>
