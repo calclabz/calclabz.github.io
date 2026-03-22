@@ -109,7 +109,13 @@ function animateCounter(element, start, end, duration, prefix) {
     requestAnimationFrame(update);
 }
 
-function toggleFAQ(btn) {
-    const item = btn.parentElement;
-    item.classList.toggle("active");
+function toggleFAQ(button) {
+    const answer = button.nextElementSibling;
+    answer.classList.toggle('closed');
+    
+    // Icon change karo
+    const icon = button.querySelector('.faq-icon');
+    if (icon) {
+        icon.textContent = answer.classList.contains('closed') ? '+' : '−';
+    }
 }
