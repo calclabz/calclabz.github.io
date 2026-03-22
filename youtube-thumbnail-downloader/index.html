@@ -10,7 +10,7 @@
 
     <!-- Meta Description -->
     <meta name="description"
-        content="Download YouTube thumbnails in HD quality instantly. Free online YouTube thumbnail downloader tool – no signup required. Works with YouTube Shorts too!">
+        content="Download YouTube thumbnails in HD quality instantly. Free online YouTube thumbnail downloader tool – single or bulk download. No signup required. Works with YouTube Shorts too!">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://calclabz.github.io/youtube-thumbnail-downloader/">
@@ -19,8 +19,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
 
     <!-- Keywords -->
-    <meta name="keywords"
-        content="youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail grabber, free thumbnail downloader, hd thumbnail download, youtube video thumbnail, save youtube thumbnail, youtube shorts thumbnail downloader">
+    <meta name="keywords" content="youtube thumbnail downloader, bulk youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail grabber, free thumbnail downloader, hd thumbnail download, youtube video thumbnail, save youtube thumbnail, youtube shorts thumbnail downloader">
 
     <!-- Performance -->
     <link rel="preload" href="/style.css" as="style">
@@ -29,19 +28,11 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600;700&display=swap"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600;700&display=swap"
-            rel="stylesheet">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- OG Tags -->
     <meta property="og:title" content="YouTube Thumbnail Downloader – Free HD Tool 2026">
-    <meta property="og:description"
-        content="Download any YouTube thumbnail in HD quality for free. No signup required. Works with YouTube Shorts too!">
+    <meta property="og:description" content="Download any YouTube thumbnail in HD quality for free. Single or bulk download. No signup required!">
     <meta property="og:image" content="https://calclabz.github.io/Images/thumbnail-tool-preview.webp">
     <meta property="og:url" content="https://calclabz.github.io/youtube-thumbnail-downloader/">
     <meta property="og:type" content="website">
@@ -50,8 +41,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="YouTube Thumbnail Downloader (HD) – Free Tool 2026">
-    <meta name="twitter:description"
-        content="Free tool to download YouTube thumbnails in HD instantly. No signup needed!">
+    <meta name="twitter:description" content="Free tool to download YouTube thumbnails in HD instantly. Single or bulk download!">
     <meta name="twitter:image" content="https://calclabz.github.io/Images/thumbnail-tool-preview.webp">
 
     <!-- GA -->
@@ -76,7 +66,7 @@
         "price": "0",
         "priceCurrency": "INR"
       },
-      "description": "Free online tool to download YouTube video thumbnails in HD quality instantly. Works with YouTube Shorts too.",
+      "description": "Free online tool to download YouTube video thumbnails in HD quality. Supports single and bulk download. Works with YouTube Shorts too.",
       "url": "https://calclabz.github.io/youtube-thumbnail-downloader/"
     }
     </script>
@@ -97,10 +87,10 @@
         },
         {
           "@type": "Question",
-          "name": "Is it legal to download YouTube thumbnails?",
+          "name": "How to bulk download YouTube thumbnails?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, YouTube thumbnails are publicly available images. You can download them for personal use, reference, or inspiration. Always respect copyright when using thumbnails commercially."
+            "text": "Click the Bulk tab, paste multiple YouTube URLs (one per line), click Get All Thumbnails, then download each thumbnail individually in HD quality for free."
           }
         },
         {
@@ -113,10 +103,10 @@
         },
         {
           "@type": "Question",
-          "name": "What quality options are available for YouTube thumbnail download?",
+          "name": "What quality options are available?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We offer HD (1280x720), HQ (480x360), and MQ (320x180) quality options. HD is recommended for best quality YouTube thumbnail download."
+            "text": "We offer HD (1280x720), HQ (480x360), and MQ (320x180) quality options. HD is recommended for best quality."
           }
         }
       ]
@@ -158,6 +148,47 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* TABS */
+        .tab-buttons {
+            display: flex;
+            gap: 0;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: #fff;
+            color: #666;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .tab-btn.active {
+            background: #1e3c72;
+            color: white;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: #f0f0f0;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* INPUTS */
         .url-input {
             width: 100%;
             padding: 12px;
@@ -168,6 +199,7 @@
             outline: none;
             transition: 0.2s;
             margin-bottom: 15px;
+            box-sizing: border-box;
         }
 
         .url-input:focus {
@@ -175,6 +207,27 @@
             box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
         }
 
+        .bulk-input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            outline: none;
+            transition: 0.2s;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .bulk-input:focus {
+            border-color: #1e3c72;
+            box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+        }
+
+        /* RESULTS */
         .thumbnail-result {
             display: none;
             margin-top: 20px;
@@ -205,22 +258,16 @@
             font-size: 12px;
             font-weight: 600;
             transition: 0.2s;
-            width: auto;
-            margin: 0;
         }
 
-        .quality-btn:hover {
-            background: #1e3c72;
-        }
+        .quality-btn:hover { background: #1e3c72; }
 
         .quality-btn.hd {
             background: #ff6b35;
             grid-column: span 2;
         }
 
-        .quality-btn.hd:hover {
-            background: #e55a25;
-        }
+        .quality-btn.hd:hover { background: #e55a25; }
 
         .error-box {
             background: #ffebee;
@@ -255,45 +302,136 @@
             font-weight: 600;
         }
 
+        /* BULK RESULTS */
+        .bulk-results {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .bulk-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .bulk-item img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .bulk-item-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .bulk-download-btns {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .bulk-dl-btn {
+            background: #2a5298;
+            color: white;
+            padding: 7px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .bulk-dl-btn:hover { background: #1e3c72; }
+
+        .bulk-dl-btn.hd {
+            background: #ff6b35;
+        }
+
+        .bulk-dl-btn.hd:hover { background: #e55a25; }
+
+        .bulk-error {
+            background: #ffebee;
+            border-left: 3px solid #f44336;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            color: #c62828;
+        }
+
+        .bulk-progress {
+            background: #e8f0fe;
+            border-radius: 6px;
+            padding: 10px 15px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #1e3c72;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .bulk-hint {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            color: #888;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        /* SEO SECTION */
         .seo-section {
             max-width: 700px;
             width: 90%;
-            margin: 60px auto;
+            margin: 40px auto;
             padding: 30px;
             font-family: 'Inter', sans-serif;
             line-height: 1.8;
             color: #333;
             background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            display: block;
-            clear: both;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         .seo-section h2 {
             color: #1e3c72;
-            font-size: 20px;
-            margin-top: 30px;
+            font-size: 18px;
+            margin-top: 25px;
             margin-bottom: 10px;
             border-left: 4px solid #ff6b35;
             padding-left: 10px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.3px;
         }
 
         .seo-section p {
             font-size: 14px;
             margin-bottom: 15px;
+            color: #444;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.2px;
+            line-height: 1.9;
         }
 
-        .seo-section ul,
-        .seo-section ol {
+        .seo-section ul, .seo-section ol {
             font-size: 14px;
             padding-left: 20px;
             margin-bottom: 15px;
+            color: #444;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.2px;
+            line-height: 1.9;
         }
 
-        .seo-section li {
-            margin-bottom: 8px;
-        }
+        .seo-section li { margin-bottom: 8px; }
     </style>
 
 </head>
@@ -329,83 +467,99 @@
         <h1>YouTube Thumbnail Downloader</h1>
         <p class="tool-subtitle">Download any YouTube video thumbnail in HD - Free!</p>
 
-        <input type="text" class="url-input" id="urlInput"
-            placeholder="Paste YouTube URL here... e.g. https://youtube.com/watch?v=..." autocomplete="off">
-
-        <button onclick="fetchThumbnail()">Get Thumbnail</button>
-
-        <div class="error-box" id="errorBox">
-            ❌ Invalid YouTube URL. Please paste a valid YouTube video URL.
+        <!-- TABS -->
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="switchTab('single')">🖼️ Single</button>
+            <button class="tab-btn" onclick="switchTab('bulk')">📦 Bulk</button>
         </div>
 
-        <div class="thumbnail-result" id="thumbnailResult">
-            <div class="video-info">
-                <p>✅ Thumbnail found!</p>
-                <p>Video ID: <span class="video-id-display" id="videoIdDisplay"></span></p>
+        <!-- SINGLE TAB -->
+        <div class="tab-content active" id="tab-single">
+            <input type="text" class="url-input" id="urlInput"
+                placeholder="Paste YouTube URL... e.g. https://youtube.com/watch?v=..." autocomplete="off">
+
+            <button onclick="fetchThumbnail()">Get Thumbnail</button>
+
+            <div class="error-box" id="errorBox">
+                ❌ Invalid YouTube URL. Please paste a valid YouTube video URL.
             </div>
 
-            <img id="thumbnailImg" src="" alt="YouTube Thumbnail Preview">
-
-            <p style="font-family:'Inter',sans-serif; font-size:12px; color:#888; margin-bottom:10px;">
-                Select quality to download:
-            </p>
-
-            <div class="quality-buttons">
-                <button class="quality-btn hd" onclick="downloadThumbnail('maxresdefault')">
-                    ⬇️ Download HD (1280x720)
-                </button>
-                <button class="quality-btn" onclick="downloadThumbnail('hqdefault')">
-                    HQ (480x360)
-                </button>
-                <button class="quality-btn" onclick="downloadThumbnail('mqdefault')">
-                    MQ (320x180)
-                </button>
+            <div class="thumbnail-result" id="thumbnailResult">
+                <div class="video-info">
+                    <p>✅ Thumbnail found!</p>
+                    <p>Video ID: <span class="video-id-display" id="videoIdDisplay"></span></p>
+                </div>
+                <img id="thumbnailImg" src="" alt="YouTube Thumbnail Preview">
+                <p style="font-family:'Inter',sans-serif; font-size:12px; color:#888; margin-bottom:10px;">
+                    Select quality to download:
+                </p>
+                <div class="quality-buttons">
+                    <button class="quality-btn hd" onclick="downloadThumbnail('maxresdefault')">
+                        ⬇️ Download HD (1280x720)
+                    </button>
+                    <button class="quality-btn" onclick="downloadThumbnail('hqdefault')">
+                        HQ (480x360)
+                    </button>
+                    <button class="quality-btn" onclick="downloadThumbnail('mqdefault')">
+                        MQ (320x180)
+                    </button>
+                </div>
             </div>
         </div>
+
+        <!-- BULK TAB -->
+        <div class="tab-content" id="tab-bulk">
+            <p class="bulk-hint">📋 Paste multiple YouTube URLs — one per line (max 10)</p>
+            <textarea class="bulk-input" id="bulkInput"
+                placeholder="https://youtube.com/watch?v=abc123&#10;https://youtube.com/watch?v=def456&#10;https://youtu.be/ghi789"></textarea>
+
+            <button onclick="fetchBulkThumbnails()">📦 Get All Thumbnails</button>
+
+            <div class="bulk-progress" id="bulkProgress">
+                ⏳ Fetching thumbnails...
+            </div>
+
+            <div class="bulk-results" id="bulkResults"></div>
+        </div>
+
     </div>
 
     <!-- SEO CONTENT -->
     <section class="seo-section">
 
         <h2>YouTube Thumbnail Downloader – Free & Fast</h2>
-        <p>Looking for a fast and free <strong>YouTube thumbnail downloader</strong>? CalcLabz lets you download any
-            YouTube video thumbnail in HD quality within seconds — no signup, no watermark, completely free!</p>
-        <p>Whether you are a content creator looking for <strong>thumbnail inspiration</strong>, a designer researching
-            YouTube thumbnail ideas, or simply want to save a YouTube thumbnail image — our tool makes it super easy.
-            Just paste the <strong>YouTube video URL</strong> and get the thumbnail instantly.</p>
+        <p>Looking for a fast and free <strong>YouTube thumbnail downloader</strong>? CalcLabz lets you download any YouTube video thumbnail in HD quality within seconds — no signup, no watermark, completely free!</p>
+        <p>Now with <strong>Bulk Download</strong> — download thumbnails from multiple YouTube videos at once! Perfect for content creators, designers, and researchers who need multiple thumbnails quickly.</p>
 
         <h2>How to Download YouTube Thumbnail?</h2>
-        <p>Downloading a YouTube thumbnail using CalcLabz is very simple:</p>
         <ol>
             <li><strong>Copy the YouTube video URL</strong> from your browser or YouTube app</li>
-            <li><strong>Paste the URL</strong> in the input box above</li>
+            <li><strong>Paste the URL</strong> in the Single tab input box</li>
             <li>Click the <strong>"Get Thumbnail"</strong> button</li>
-            <li>Choose your quality — <strong>HD (1280x720)</strong>, HQ (480x360), or MQ (320x180)</li>
-            <li>Click <strong>Download</strong> and save to your device ✅</li>
+            <li>Choose quality — <strong>HD (1280x720)</strong>, HQ or MQ</li>
+            <li>Click <strong>Download</strong> — done! ✅</li>
         </ol>
-        <p>That's it! Your YouTube thumbnail download is complete in just 5 steps — completely free!</p>
+
+        <h2>How to Bulk Download YouTube Thumbnails?</h2>
+        <ol>
+            <li>Click the <strong>"Bulk"</strong> tab above</li>
+            <li>Paste <strong>multiple YouTube URLs</strong> — one per line</li>
+            <li>Click <strong>"Get All Thumbnails"</strong></li>
+            <li>Download each thumbnail in your preferred quality</li>
+        </ol>
 
         <h2>Why Use CalcLabz YouTube Thumbnail Downloader?</h2>
         <ul>
-            <li>✅ <strong>100% Free</strong> — No hidden charges, no subscription</li>
-            <li>✅ <strong>HD Quality</strong> — Download thumbnails in 1280x720 HD resolution</li>
-            <li>✅ <strong>No Signup Required</strong> — Use instantly without account</li>
-            <li>✅ <strong>Works with YouTube Shorts</strong> — Download Shorts thumbnails too</li>
-            <li>✅ <strong>Fast & Easy</strong> — Get thumbnail in just one click</li>
-            <li>✅ <strong>All Devices</strong> — Works on mobile, tablet, and desktop</li>
+            <li>✅ <strong>100% Free</strong> — No hidden charges</li>
+            <li>✅ <strong>HD Quality</strong> — Download in 1280x720 resolution</li>
+            <li>✅ <strong>Bulk Download</strong> — Multiple thumbnails at once 🔥</li>
+            <li>✅ <strong>No Signup Required</strong> — Use instantly</li>
+            <li>✅ <strong>Works with YouTube Shorts</strong></li>
+            <li>✅ <strong>All Devices</strong> — Mobile, tablet, desktop</li>
         </ul>
 
-        <h2>What is a YouTube Thumbnail?</h2>
-        <p>A <strong>YouTube thumbnail</strong> is the preview image displayed before a video starts playing. It is the
-            first thing viewers see when browsing YouTube. A good YouTube thumbnail image directly affects how many
-            people click on your video.</p>
-        <p>YouTube recommends thumbnails in <strong>1280x720 pixels (HD)</strong> with a 16:9 aspect ratio. Using our
-            free <strong>YouTube thumbnail grabber</strong>, you can download any public video's thumbnail in HD quality
-            for free.</p>
-
         <h2>Download YouTube Shorts Thumbnail</h2>
-        <p>Our tool also works as a <strong>YouTube Shorts thumbnail downloader</strong>. Simply paste the YouTube
-            Shorts URL in the input box and download the thumbnail in HD quality instantly!</p>
+        <p>Our tool also works as a <strong>YouTube Shorts thumbnail downloader</strong>. Simply paste the YouTube Shorts URL and download in HD quality instantly — same as regular videos!</p>
 
     </section>
 
@@ -415,8 +569,7 @@
         <div class="tools-card">
             <span class="blog-tag">YouTube Tool</span>
             <h3>YouTube Earnings Calculator – Estimate Income Per Views</h3>
-            <p>Calculate your YouTube earnings based on views, RPM, and niche. Get an instant estimate of your income in
-                seconds.</p>
+            <p>Calculate your YouTube earnings based on views, RPM, and niche. Get an instant estimate of your income in seconds.</p>
             <a href="/" title="YouTube Earnings Calculator India">Calculate Earnings →</a>
         </div>
     </div>
@@ -428,54 +581,50 @@
         <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 How to download YouTube thumbnail for free?
-                <span class="faq-icon">+</span>
+                <span class="faq-icon">−</span>
             </button>
             <div class="faq-answer">
-                <p>Simply paste the YouTube video URL in the input box, click "Get Thumbnail", choose HD, HQ or MQ
-                    quality and download instantly. No signup needed — completely free!</p>
+                <p>Paste the YouTube URL in Single tab, click "Get Thumbnail", choose HD/HQ/MQ quality and download instantly. No signup needed!</p>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
-                Is it legal to download YouTube thumbnails?
-                <span class="faq-icon">+</span>
+                How to bulk download YouTube thumbnails?
+                <span class="faq-icon">−</span>
             </button>
             <div class="faq-answer">
-                <p>Yes! YouTube thumbnails are publicly available images. You can download them for personal use,
-                    reference, or inspiration. Always respect copyright when using thumbnails commercially.</p>
+                <p>Click the <strong>Bulk tab</strong>, paste multiple YouTube URLs (one per line, max 10), click "Get All Thumbnails" and download each one instantly!</p>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 What quality options are available?
-                <span class="faq-icon">+</span>
+                <span class="faq-icon">−</span>
             </button>
             <div class="faq-answer">
-                <p>We offer HD (1280x720), HQ (480x360), and MQ (320x180) quality options. <strong>HD is
-                        recommended</strong> for best quality YouTube thumbnail download.</p>
+                <p>We offer HD (1280x720), HQ (480x360), and MQ (320x180). <strong>HD is recommended</strong> for best quality.</p>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 Does this work for YouTube Shorts?
-                <span class="faq-icon">+</span>
+                <span class="faq-icon">−</span>
             </button>
             <div class="faq-answer">
-                <p>Yes! Paste any YouTube Shorts URL and download the thumbnail instantly in HD quality.</p>
+                <p>Yes! Works for both regular YouTube videos and YouTube Shorts. Just paste the Shorts URL!</p>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
                 Do I need to create an account?
-                <span class="faq-icon">+</span>
+                <span class="faq-icon">−</span>
             </button>
             <div class="faq-answer">
-                <p>No account needed! CalcLabz YouTube Thumbnail Downloader is completely free — just paste the URL and
-                    download instantly.</p>
+                <p>No account needed! Completely free — just paste the URL and download instantly.</p>
             </div>
         </div>
 
@@ -490,6 +639,20 @@
     <script>
         let currentVideoId = '';
 
+        // =====================
+        // TAB SWITCHING
+        // =====================
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            document.getElementById('tab-' + tab).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // =====================
+        // VIDEO ID EXTRACTOR
+        // =====================
         function extractVideoId(url) {
             const patterns = [
                 /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
@@ -502,6 +665,9 @@
             return null;
         }
 
+        // =====================
+        // SINGLE DOWNLOAD
+        // =====================
         function fetchThumbnail() {
             const url = document.getElementById('urlInput').value.trim();
             const errorBox = document.getElementById('errorBox');
@@ -511,7 +677,6 @@
             result.style.display = 'none';
 
             const videoId = extractVideoId(url);
-
             if (!videoId) {
                 errorBox.style.display = 'block';
                 return;
@@ -520,9 +685,8 @@
             currentVideoId = videoId;
             document.getElementById('videoIdDisplay').innerText = videoId;
 
-            const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
             const img = document.getElementById('thumbnailImg');
-            img.src = thumbnailUrl;
+            img.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
             img.onload = function () {
                 if (img.naturalWidth === 120) {
@@ -544,6 +708,90 @@
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);
                 link.download = `thumbnail_${currentVideoId}_${quality}.jpg`;
+                link.click();
+            } catch (error) {
+                window.open(url, '_blank');
+            }
+        }
+
+        // =====================
+        // BULK DOWNLOAD
+        // =====================
+        async function fetchBulkThumbnails() {
+            const input = document.getElementById('bulkInput').value.trim();
+            const resultsDiv = document.getElementById('bulkResults');
+            const progressDiv = document.getElementById('bulkProgress');
+
+            if (!input) {
+                alert('Please paste at least one YouTube URL!');
+                return;
+            }
+
+            // Get all URLs - max 10
+            const urls = input.split('\n')
+                .map(u => u.trim())
+                .filter(u => u.length > 0)
+                .slice(0, 10);
+
+            resultsDiv.style.display = 'none';
+            resultsDiv.innerHTML = '';
+            progressDiv.style.display = 'block';
+            progressDiv.innerText = `⏳ Fetching ${urls.length} thumbnail(s)...`;
+
+            let successCount = 0;
+
+            for (let i = 0; i < urls.length; i++) {
+                const url = urls[i];
+                const videoId = extractVideoId(url);
+
+                progressDiv.innerText = `⏳ Processing ${i + 1} of ${urls.length}...`;
+
+                if (!videoId) {
+                    // Show error for invalid URL
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'bulk-item';
+                    errorDiv.innerHTML = `<div class="bulk-error">❌ Invalid URL: ${url}</div>`;
+                    resultsDiv.appendChild(errorDiv);
+                    continue;
+                }
+
+                // Create item
+                const item = document.createElement('div');
+                item.className = 'bulk-item';
+                item.innerHTML = `
+                    <img src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg"
+                         alt="YouTube Thumbnail ${videoId}"
+                         onerror="this.src='https://img.youtube.com/vi/${videoId}/mqdefault.jpg'">
+                    <div class="bulk-item-title">📹 Video ID: ${videoId}</div>
+                    <div class="bulk-download-btns">
+                        <button class="bulk-dl-btn hd" onclick="bulkDownload('${videoId}', 'maxresdefault')">⬇️ HD</button>
+                        <button class="bulk-dl-btn" onclick="bulkDownload('${videoId}', 'hqdefault')">HQ</button>
+                        <button class="bulk-dl-btn" onclick="bulkDownload('${videoId}', 'mqdefault')">MQ</button>
+                    </div>
+                `;
+                resultsDiv.appendChild(item);
+                successCount++;
+            }
+
+            progressDiv.style.display = 'none';
+            resultsDiv.style.display = 'block';
+
+            if (successCount > 0) {
+                const summary = document.createElement('div');
+                summary.style.cssText = 'font-family:Inter,sans-serif; font-size:13px; color:#2a5298; margin-bottom:15px; font-weight:600;';
+                summary.innerText = `✅ ${successCount} thumbnail(s) ready to download!`;
+                resultsDiv.insertBefore(summary, resultsDiv.firstChild);
+            }
+        }
+
+        async function bulkDownload(videoId, quality) {
+            const url = `https://img.youtube.com/vi/${videoId}/${quality}.jpg`;
+            try {
+                const response = await fetch(url);
+                const blob = await response.blob();
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = `thumbnail_${videoId}_${quality}.jpg`;
                 link.click();
             } catch (error) {
                 window.open(url, '_blank');
