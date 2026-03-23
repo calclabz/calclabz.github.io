@@ -41,6 +41,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog: How to get 1000 subs fast -->
+  <url>
+  <loc>https://calclabz.github.io/Blogs/how-to-get-1000-youtube-subscribers-fast/</loc>
+  <lastmod>2026-03-23</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+  </url>
+
   <!-- Blogs List -->
   <url>
     <loc>https://calclabz.github.io/blogs.html</loc>
