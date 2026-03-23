@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'youtube-earnings-india-2026.html',
         'Blogs/how-to-download-youtube-thumbnail/',
         'Blogs/youtube-thumbnail-size-guide/',
-        'Blogs/5-Best-YouTube-Thumbnail-Tips-to-Increase-Clicks-(CTR)-in-2026'
+        'Blogs/5-Best-YouTube-Thumbnail-Tips-to-Increase-Clicks-(CTR)-in-2026',
+        'Blogs/how-to-get-1000-youtube-subscribers-fast'
     ];
     
     const blogCountEl = document.querySelector('.blog-count');
