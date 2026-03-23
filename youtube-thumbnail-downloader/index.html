@@ -707,6 +707,31 @@
             } catch { window.open(url, '_blank'); }
         }
 
+        // =====================
+        // QUALITY BADGE
+        // =====================
+        function checkQuality(id, img) {
+            if (img.naturalWidth === 120 || img.naturalWidth === 0) {
+                img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+                setQualityBadge(id, 'hq');
+            } else {
+                setQualityBadge(id, 'hd');
+            }
+        }
+
+        function setQualityBadge(id, quality) {
+            const badge = document.getElementById(`quality-badge-${id}`);
+            if (!badge) return;
+            if (quality === 'hd') {
+                badge.innerHTML = `<span style="background:#e8f5e9; color:#2e7d32; padding:3px 10px; border-radius:20px; font-weight:600; font-family:'Inter',sans-serif; font-size:11px;">✅ HD Quality Available</span>`;
+            } else {
+                badge.innerHTML = `<span style="background:#fff8e1; color:#f57f17; padding:3px 10px; border-radius:20px; font-weight:600; font-family:'Inter',sans-serif; font-size:11px;">⚠️ HD not available — Showing best quality</span>`;
+            }
+        }
+
+        // =====================
+        // BULK FETCH
+        // =====================
         async function fetchBulkThumbnails() {
             const input = document.getElementById('bulkInput').value.trim();
             const resultsDiv = document.getElementById('bulkResults');
@@ -739,9 +764,12 @@
                 item.className = 'bulk-item';
                 item.innerHTML = `
                     <img src="https://img.youtube.com/vi/${id}/maxresdefault.jpg"
-                        alt="YouTube Thumbnail ${id}"
-                        onerror="this.src='https://img.youtube.com/vi/${id}/hqdefault.jpg'">
+                         alt="YouTube Thumbnail ${id}"
+                         id="img-${id}"
+                         onload="checkQuality('${id}', this)"
+                         onerror="this.src='https://img.youtube.com/vi/${id}/hqdefault.jpg'; setQualityBadge('${id}', 'hq')">
                     <div class="bulk-item-title">Video ID: ${id}</div>
+                    <div id="quality-badge-${id}" style="margin-bottom:8px;"></div>
                     <div class="bulk-download-btns">
                         <button class="bulk-dl-btn hd" onclick="bulkDownload('${id}','maxresdefault')">⬇️ HD</button>
                         <button class="bulk-dl-btn" onclick="bulkDownload('${id}','hqdefault')">HQ</button>
