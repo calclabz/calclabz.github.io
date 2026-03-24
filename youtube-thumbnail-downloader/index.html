@@ -47,6 +47,7 @@
         gtag('config', 'G-EV5J5ER7ZR');
     </script>
 
+    <!-- ✅ FIX 1: SoftwareApplication schema with author + publisher added -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -56,7 +57,17 @@
       "operatingSystem": "Web",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
       "description": "Free online tool to download YouTube thumbnails in HD. Single and bulk ZIP download. Works with YouTube Shorts.",
-      "url": "https://calclabz.github.io/youtube-thumbnail-downloader/"
+      "url": "https://calclabz.github.io/youtube-thumbnail-downloader/",
+      "author": {
+        "@type": "Organization",
+        "name": "CalcLabz",
+        "url": "https://calclabz.github.io"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CalcLabz",
+        "url": "https://calclabz.github.io"
+      }
     }
     </script>
 
@@ -89,6 +100,34 @@
     }
     </script>
 
+    <!-- ✅ FIX 2: New WebPage + BreadcrumbList schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "YouTube Thumbnail Downloader – Free HD Tool 2026",
+      "url": "https://calclabz.github.io/youtube-thumbnail-downloader/",
+      "description": "Free online tool to download YouTube thumbnails in HD. Single and bulk ZIP download.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://calclabz.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "YouTube Thumbnail Downloader",
+            "item": "https://calclabz.github.io/youtube-thumbnail-downloader/"
+          }
+        ]
+      }
+    }
+    </script>
+
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -97,6 +136,28 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <style>
+        /* ✅ FIX 3: H1 heading styles (bahar rakha hai ab) */
+        .page-heading {
+            text-align: center;
+            padding: 30px 20px 0;
+        }
+
+        .page-heading h1 {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: #ff6b35;
+            font-size: 30px;
+            margin: 0 0 8px;
+            margin-bottom: 40px;
+        }
+
+        .page-heading p {
+            color: #ffffff;
+            font-size: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            margin: 0;
+        }
+
         .tool-container {
             background: #f3f3f3;
             padding: 30px 25px;
@@ -105,19 +166,18 @@
             width: 700px;
             max-width: 90%;
             text-align: center;
-            margin-top: 80px;
+            margin-top: 20px;
         }
 
-        .tool-container h1 {
+        .tool-container h2 {
             font-family: 'JetBrains Mono', monospace;
             font-weight: 600;
             color: #1e3c72;
             margin-bottom: 5px;
-            
+            font-size: 20px;
         }
 
         .tool-subtitle {
-            font-family: 'JetBrains Mono', monospace;
             color: #666;
             font-size: 13px;
             margin-bottom: 20px;
@@ -485,8 +545,15 @@
         </div>
     </nav>
 
-    <div class="tool-container">
+    <!-- ✅ FIX 3: H1 ab tool-container ke BAHAR hai — Google isko properly read karega -->
+    <div class="page-heading">
         <h1>YouTube Thumbnail Downloader</h1>
+        <p>Download any YouTube video thumbnail in HD – Free, No Signup!</p>
+    </div>
+
+    <div class="tool-container">
+        <!-- H1 ki jagah ab H2 hai yahan -->
+        <h2>YouTube Thumbnail Downloader</h2>
         <p class="tool-subtitle">Download any YouTube video thumbnail in HD - Free!</p>
 
         <div class="tab-buttons">
@@ -657,6 +724,7 @@
         let currentVideoId = '';
         let bulkIds = [];
 
+        // ✅ FIX 4: switchTab function — CSS clash theek kiya
         function switchTab(tab) {
             document.querySelectorAll('.tab-content').forEach(el => {
                 el.classList.remove('active');
@@ -711,9 +779,6 @@
             } catch { window.open(url, '_blank'); }
         }
 
-        // =====================
-        // QUALITY BADGE
-        // =====================
         function checkQuality(id, img) {
             if (img.naturalWidth === 120 || img.naturalWidth === 0) {
                 img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
@@ -733,9 +798,6 @@
             }
         }
 
-        // =====================
-        // BULK FETCH
-        // =====================
         async function fetchBulkThumbnails() {
             const input = document.getElementById('bulkInput').value.trim();
             const resultsDiv = document.getElementById('bulkResults');
