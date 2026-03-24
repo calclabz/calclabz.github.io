@@ -113,10 +113,11 @@
             font-weight: 600;
             color: #1e3c72;
             margin-bottom: 5px;
-            font-size: 20px;
+            
         }
 
         .tool-subtitle {
+            font-family: 'JetBrains Mono', monospace;
             color: #666;
             font-size: 13px;
             margin-bottom: 20px;
@@ -657,8 +658,11 @@
         let bulkIds = [];
 
         function switchTab(tab) {
-            document.getElementById('tab-single').style.display = tab === 'single' ? 'block' : 'none';
-            document.getElementById('tab-bulk').style.display = tab === 'bulk' ? 'block' : 'none';
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.remove('active');
+                el.style.display = '';
+            });
+            document.getElementById('tab-' + tab).classList.add('active');
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.tab === tab);
             });
