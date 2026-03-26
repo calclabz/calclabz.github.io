@@ -363,6 +363,49 @@
             font-size: 13px;
             color: #333;
         }
+
+        /* ✅ FIX: Related Articles Section */
+        .related-articles {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+
+        .related-articles h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            color: #1e3c72;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff6b35;
+            padding-left: 10px;
+        }
+
+        .related-articles a {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            color: #2a5298;
+            text-decoration: none;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .related-articles a:last-child {
+            border-bottom: none;
+        }
+
+        .related-articles a:hover {
+            color: #ff6b35;
+        }
+
+        .related-articles a::before {
+            content: "→ ";
+            color: #ff6b35;
+        }
     </style>
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -378,7 +421,7 @@
 
     <nav class="navbar">
         <div class="nav-logo">
-            <a href="index.html" style="text-decoration:none;">
+            <a href="/" style="text-decoration:none;">
                 <span class="logo-calc">Calc</span><span class="logo-labz">Labz</span>
             </a>
         </div>
@@ -391,11 +434,11 @@
             <div class="dropdown">
                 <a href="#" class="dropdown-toggle">Tools ▾</a>
                 <div class="dropdown-menu">
-                    <a href="index.html">💰 Earnings Calculator</a>
+                    <a href="/">💰 Earnings Calculator</a>
                     <a href="/youtube-thumbnail-downloader/">🖼️ Thumbnail Downloader</a>
                 </div>
             </div>
-            <a href="/blogs.html" class="active">Blogs <span class="blog-count">3</span></a>
+            <a href="/blogs.html" class="active">Blogs <span class="blog-count">6</span></a>
             <a href="/about.html">About</a>
         </div>
     </nav>
@@ -755,6 +798,16 @@
         <div class="cta-box">
             <p>🚀 Download and analyze high-performing thumbnails for free — no signup required!</p>
             <a href="/youtube-thumbnail-downloader/">Try YouTube Thumbnail Downloader →</a>
+        </div>
+
+        <!-- ✅ FIX 1: Related Articles for Internal Linking -->
+        <div class="related-articles">
+            <h3>📚 Related Articles</h3>
+            <a href="/Blogs/youtube-thumbnail-size-guide/">YouTube Thumbnail Size Guide 2026 – Best Size & Design Tips</a>
+            <a href="/Blogs/5-best-youtube-thumbnail-tips-ctr-2026/">5 Best YouTube Thumbnail Tips to Increase Clicks & CTR in 2026</a>
+            <a href="/Blogs/how-to-download-youtube-thumbnail/">How to Download YouTube Thumbnail in HD – Free Guide 2026</a>
+            <a href="/Blogs/how-to-get-1000-youtube-subscribers-fast/">How to Get 1000 YouTube Subscribers Fast in 2026</a>
+            <a href="/youtube-earnings-india-2026.html">How Much Does YouTube Pay Per 1000 Views in India in 2026?</a>
         </div>
 
         <div class="blog-nav">
