@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'Blogs/youtube-thumbnail-size-guide/',
         'Blogs/5-Best-YouTube-Thumbnail-Tips-to-Increase-Clicks-(CTR)-in-2026/',
         'Blogs/how-to-get-1000-youtube-subscribers-fast/',
-        'Blogs/youtube-thumbnail-seo-guide/'
+        'Blogs/youtube-thumbnail-seo-guide/',
+        'Blogs/youtube-CTR-guide-2026'
     ];
     
     const blogCountEl = document.querySelector('.blog-count');
