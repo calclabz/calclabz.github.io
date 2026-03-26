@@ -22,8 +22,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Navbar */
@@ -38,7 +45,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
 }
 
@@ -55,7 +62,7 @@ body {
 }
 
 .nav-links a {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
@@ -70,7 +77,7 @@ body {
 
 .nav-links a:hover {
     color: white;
-    border-bottom: 2px solid rgba(255,107,53,0.5);
+    border-bottom: 2px solid rgba(255, 107, 53, 0.5);
 }
 
 .nav-links a.active {
@@ -89,13 +96,14 @@ body {
     justify-content: center;
     font-size: 10px;
 }
+
 /*Tools Drop down*/
 .dropdown {
     position: relative;
 }
 
 .dropdown-toggle {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
@@ -108,7 +116,7 @@ body {
 
 .dropdown-toggle:hover {
     color: white;
-    border-bottom: 2px solid rgba(255,107,53,0.5);
+    border-bottom: 2px solid rgba(255, 107, 53, 0.5);
 }
 
 .dropdown-menu {
@@ -122,7 +130,7 @@ body {
     border-radius: 8px;
     padding: 8px 0;
     min-width: 200px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     z-index: 200;
 }
 
@@ -216,7 +224,7 @@ body {
     .dropdown-menu {
         position: static;
         display: none;
-        background: rgba(253, 254, 255, 0.98); 
+        background: rgba(253, 254, 255, 0.98);
         border-radius: 6px;
         box-shadow: none;
         padding: 5px 0;
@@ -245,7 +253,51 @@ body {
 
     .nav-links a {
         padding: 12px 25px;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* toollink */
+
+.link {
+    text-decoration: none;
+}
+
+.tool_link {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0px 12px 0px 12px;
+
+    background: linear-gradient(90deg,
+            #ff6b35 0%,
+            #1d1fa1 40%,
+            #3700ff 50%,
+            #1d1fa1 40%,
+            #ff6b35 100%);
+
+    background-size: 200% auto;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shineText 2S linear infinite;
+}
+
+
+
+
+@keyframes shineText {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
     }
 }
 
@@ -273,7 +325,7 @@ h1 {
 }
 
 .hero h2 {
-    color:#ff6b35;
+    color: #ff6b35;
     font-size: 30px;
     margin-bottom: 40px;
     font-weight: 700;
@@ -441,7 +493,7 @@ button:hover {
 }
 
 .tools-card {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 12px;
@@ -449,7 +501,7 @@ button:hover {
 }
 
 .tools-card:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .tools-tag {
@@ -470,7 +522,7 @@ button:hover {
 }
 
 .tools-card p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     margin-bottom: 12px;
     font-family: 'Inter', sans-serif;
@@ -492,7 +544,7 @@ button:hover {
 
 /* Blog Section */
 .blog-section {
-   max-width: 700px;
+    max-width: 700px;
     width: 90%;
     margin: 20px auto;
 }
@@ -505,7 +557,7 @@ button:hover {
 }
 
 .blog-card {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 12px;
@@ -513,7 +565,7 @@ button:hover {
 }
 
 .blog-card:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .blog-tag {
@@ -534,7 +586,7 @@ button:hover {
 }
 
 .blog-card p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     margin-bottom: 12px;
     font-family: 'Inter', sans-serif;
@@ -575,7 +627,7 @@ button:hover {
 
 .faq-question {
     width: 100%;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     color: white;
     border: none;
     padding: 14px 16px;
@@ -591,7 +643,7 @@ button:hover {
 }
 
 .faq-question:hover {
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .faq-icon {
@@ -615,7 +667,7 @@ button:hover {
 .faq-answer p {
     margin: 0;
     font-size: 13px;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     font-family: 'JetBrains Mono', monospace;
 }
@@ -662,14 +714,14 @@ button:hover {
 
 /* Footer */
 .site-footer {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
     padding: 20px 0;
     text-align: center;
 }
 
 .site-footer a {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     margin: 0 5px;
 }
