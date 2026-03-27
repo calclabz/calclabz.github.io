@@ -64,6 +64,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+<!-- Blog: Youtube Impression Guide -->
+  <url>
+    <loc>https://calclabz.github.io/Blogs/youtube-impressions-guide/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Blogs List -->
   <url>
