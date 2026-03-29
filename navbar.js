@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'Blogs/how-to-get-1000-youtube-subscribers-fast/',
         'Blogs/youtube-thumbnail-seo-guide/',
         'Blogs/youtube-CTR-guide-2026',
-        'Blogs/youtube-impressions-guide'
+        'Blogs/youtube-impressions-guide',
+        'Blogs/youtube-ctr-vs-watch-time'
     ];
     
     const blogCountEl = document.querySelector('.blog-count');
