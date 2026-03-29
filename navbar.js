@@ -20,13 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const blogs = [
         'youtube-earnings-india-2026.html',
+
         'Blogs/how-to-download-youtube-thumbnail/',
+
         'Blogs/youtube-thumbnail-size-guide/',
+
         'Blogs/5-Best-YouTube-Thumbnail-Tips-to-Increase-Clicks-(CTR)-in-2026/',
+
         'Blogs/how-to-get-1000-youtube-subscribers-fast/',
+
         'Blogs/youtube-thumbnail-seo-guide/',
+
         'Blogs/youtube-CTR-guide-2026',
+
         'Blogs/youtube-impressions-guide',
+
         'Blogs/youtube-ctr-vs-watch-time'
     ];
     
@@ -34,4 +42,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (blogCountEl) {
         blogCountEl.innerText = blogs.length;
     }
+    
 });
