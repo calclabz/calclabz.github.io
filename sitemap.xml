@@ -80,6 +80,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog: Youtube Ctr vs Watch Time -->
+  <url>
+    <loc>https://calclabz.github.io/Blogs/youtube-ctr-vs-watch-time/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blogs List -->
   <url>
     <loc>https://calclabz.github.io/Blogs/</loc>
