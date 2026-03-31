@@ -88,6 +88,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog: Youtube algorithm guid 2026 -->
+  <url>
+    <loc>https://calclabz.github.io/Blogs/youtube-algorithm-2026-guide/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blogs List -->
   <url>
     <loc>https://calclabz.github.io/Blogs/</loc>

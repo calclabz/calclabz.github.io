@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         'Blogs/youtube-impressions-guide',
 
-        'Blogs/youtube-ctr-vs-watch-time'
+        'Blogs/youtube-ctr-vs-watch-time',
+
+        'Blogs/youtube-algorithm-2026-guide'
+        
     ];
     
     const blogCountEl = document.querySelector('.blog-count');
