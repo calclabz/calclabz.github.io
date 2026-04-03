@@ -47,3 +47,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 });
+
+// AdSense Auto Ads - Skip on policy pages
+var noAdPages = [
+    '/about.html',
+    '/privacy-policy.html',
+    '/terms-of-service.html',
+    '/contact.html'
+];
+
+var currentPage = window.location.pathname;
+var isNoAdPage = noAdPages.some(function(page) {
+    return currentPage.includes(page);
+});
+
+if (!isNoAdPage) {
+    var adsenseScript = document.createElement('script');
+    adsenseScript.async = true;
+    adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4293673248342437';
+    adsenseScript.setAttribute('crossorigin', 'anonymous');
+    document.head.appendChild(adsenseScript);
+}
