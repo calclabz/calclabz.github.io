@@ -1073,8 +1073,6 @@
 
         function downloadQR() {
             const canvas = document.querySelector('#qrcode canvas');
-            qrDiv.height = 300;
-            qrDiv.width = 300;
             if (!canvas) { alert('Generate a subscribe link first!'); return; }
             const link = document.createElement('a');
             link.download = 'youtube-subscribe-qr-calclabz.png';
