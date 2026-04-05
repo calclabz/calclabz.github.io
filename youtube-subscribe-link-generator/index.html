@@ -1016,8 +1016,8 @@
 
             new QRCode(qrDiv, {
                 text: currentSubscribeLink,
-                width: 300,
-                height: 300,
+                width: 200,
+                height: 200,
                 colorDark: darkColor,
                 colorLight: lightColor,
                 correctLevel: QRCode.CorrectLevel.H
@@ -1073,6 +1073,8 @@
 
         function downloadQR() {
             const canvas = document.querySelector('#qrcode canvas');
+            qrDiv.height = 300;
+            qrDiv.width = 300;
             if (!canvas) { alert('Generate a subscribe link first!'); return; }
             const link = document.createElement('a');
             link.download = 'youtube-subscribe-qr-calclabz.png';
