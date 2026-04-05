@@ -37,7 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         'Blogs/youtube-ctr-vs-watch-time',
 
-        'Blogs/youtube-algorithm-2026-guide'
+        'Blogs/youtube-algorithm-2026-guide',
+
+        'Blogs/youtube-subscribe-link-generator-guide'
         
     ];
     
