@@ -1,54 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CalcLabz – Free YouTube Tools for Indian Creators</title>
-    <meta name="description" content="Free YouTube tools for Indian creators. Calculate earnings, download thumbnails, analyze channels, extract tags and more. Built for Indian YouTubers in 2026.">
+    <meta name="description"
+        content="Free YouTube tools for Indian creators. Calculate earnings, download thumbnails, analyze channels, extract tags and more. Built for Indian YouTubers in 2026.">
     <link rel="canonical" href="https://calclabz.github.io/">
     <meta name="robots" content="index, follow">
 
     <!-- OG -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="CalcLabz – Free YouTube Tools for Indian Creators">
-    <meta property="og:description" content="Free YouTube tools for Indian creators. Earnings calculator, thumbnail downloader, channel analyzer and more.">
+    <meta property="og:description"
+        content="Free YouTube tools for Indian creators. Earnings calculator, thumbnail downloader, channel analyzer and more.">
     <meta property="og:url" content="https://calclabz.github.io/">
     <meta property="og:site_name" content="CalcLabz">
 
     <!-- Schema -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "CalcLabz",
+      "@id": "https://calclabz.github.io/#website",
       "url": "https://calclabz.github.io/",
+      "name": "CalcLabz",
       "description": "Free YouTube tools for Indian creators",
+      "publisher": {
+        "@id": "https://calclabz.github.io/#organization"
+      },
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://calclabz.github.io/?q={search_term_string}",
         "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://calclabz.github.io/#organization",
+      "name": "CalcLabz",
+      "url": "https://calclabz.github.io/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://calclabz.github.io/favicon-96x96.png",
+        "width": 96,
+        "height": 96
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "calclabz@gmail.com",
+        "contactType": "customer support"
       }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Free YouTube Tools for Indian Creators",
+      "description": "A collection of 2026 updated tools for YouTubers including earnings calculator, thumbnail downloader, and tag extractor.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "YouTube Money Calculator",
+          "url": "https://calclabz.github.io/youtube-money-calculator/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "YouTube Thumbnail Downloader",
+          "url": "https://calclabz.github.io/youtube-thumbnail-downloader/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "YouTube Tag Extractor",
+          "url": "https://calclabz.github.io/youtube-tag-extractor/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "YouTube Channel Analyzer",
+          "url": "https://calclabz.github.io/youtube-channel-analyzer/"
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="CalcLabz" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         :root {
             --navy: #1e3c72;
             --blue: #2a5298;
             --orange: #ff6b35;
             --white: #ffffff;
-            --glass: rgba(255,255,255,0.08);
-            --glass-border: rgba(255,255,255,0.15);
+            --glass: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'JetBrains Mono', monospace;
@@ -64,9 +142,9 @@
             position: fixed;
             inset: 0;
             background-image:
-                radial-gradient(circle at 20% 20%, rgba(255,107,53,0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(42,82,152,0.3) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(30,60,114,0.2) 0%, transparent 70%);
+                radial-gradient(circle at 20% 20%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(42, 82, 152, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(30, 60, 114, 0.2) 0%, transparent 70%);
             pointer-events: none;
             z-index: 0;
         }
@@ -74,7 +152,8 @@
         /* NAVBAR */
         .navbar {
             position: fixed;
-            top: 0; left: 0;
+            top: 0;
+            left: 0;
             width: 100%;
             background: rgba(15, 31, 69, 0.92);
             padding: 14px 30px;
@@ -83,16 +162,32 @@
             align-items: center;
             z-index: 100;
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .nav-logo a { text-decoration: none; font-size: 22px; font-weight: 800; letter-spacing: 1px; }
-        .logo-calc { color: var(--orange); }
-        .logo-labz { color: var(--white); }
+        .nav-logo a {
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
 
-        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .logo-calc {
+            color: var(--orange);
+        }
+
+        .logo-labz {
+            color: var(--white);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
         .nav-links a {
-            color: rgba(255,255,255,0.75);
+            color: rgba(255, 255, 255, 0.75);
             text-decoration: none;
             font-size: 13px;
             font-weight: 600;
@@ -100,30 +195,45 @@
             border-bottom: 2px solid transparent;
             padding-bottom: 2px;
         }
-        .nav-links a:hover { color: var(--orange); border-bottom-color: rgba(255,107,53,0.6); }
 
-        .dropdown { position: relative; }
+        .nav-links a:hover {
+            color: var(--orange);
+            border-bottom-color: rgba(255, 107, 53, 0.6);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
         .dropdown-toggle {
-            color: rgba(255,255,255,0.75);
-            font-size: 13px; font-weight: 600;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 13px;
+            font-weight: 600;
             cursor: pointer;
             border-bottom: 2px solid transparent;
             padding-bottom: 2px;
             transition: 0.2s;
             font-family: 'JetBrains Mono', monospace;
         }
-        .dropdown-toggle:hover { color: white; border-bottom-color: rgba(255,107,53,0.6); }
+
+        .dropdown-toggle:hover {
+            color: white;
+            border-bottom-color: rgba(255, 107, 53, 0.6);
+        }
+
         .dropdown-menu {
             display: none;
             position: absolute;
-            top: 36px; right: 0;
+            top: 36px;
+            right: 0;
             background: white;
             border-radius: 10px;
             padding: 8px 0;
             min-width: 210px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             z-index: 200;
         }
+
         .dropdown-menu a {
             display: block;
             padding: 10px 16px;
@@ -133,16 +243,25 @@
             transition: 0.2s;
             text-decoration: none;
         }
-        .dropdown-menu a:hover { background: #ff6b35; color: white !important; }
-        .dropdown:hover .dropdown-menu { display: block; }
+
+        .dropdown-menu a:hover {
+            background: #ff6b35;
+            color: white !important;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
         .blog-count {
             background: var(--orange);
             color: white;
             border-radius: 50%;
-            width: 18px; height: 18px;
+            width: 18px;
+            height: 18px;
             display: inline-flex;
-            align-items: center; justify-content: center;
+            align-items: center;
+            justify-content: center;
             font-size: 10px;
             margin-left: 4px;
         }
@@ -150,21 +269,36 @@
         /* Hamburger */
         .hamburger {
             display: none;
-            background: none; border: none;
+            background: none;
+            border: none;
             cursor: pointer;
             flex-direction: column;
-            gap: 5px; padding: 5px;
+            gap: 5px;
+            padding: 5px;
         }
+
         .hamburger span {
             display: block;
-            width: 25px; height: 3px;
+            width: 25px;
+            height: 3px;
             background: white;
             border-radius: 3px;
             transition: 0.3s;
         }
-        .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); background: var(--orange); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
-        .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background: var(--orange); }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            background: var(--orange);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            background: var(--orange);
+        }
 
         /* HERO */
         .hero {
@@ -183,8 +317,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255,107,53,0.15);
-            border: 1px solid rgba(255,107,53,0.4);
+            background: rgba(255, 107, 53, 0.15);
+            border: 1px solid rgba(255, 107, 53, 0.4);
             border-radius: 50px;
             padding: 6px 16px;
             font-size: 12px;
@@ -196,15 +330,25 @@
 
         .hero-badge::before {
             content: '';
-            width: 7px; height: 7px;
+            width: 7px;
+            height: 7px;
             background: var(--orange);
             border-radius: 50%;
             animation: pulse 1.5s infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
         }
 
         .hero h1 {
@@ -216,11 +360,13 @@
             animation: fadeDown 0.7s ease 0.1s both;
         }
 
-        .hero h1 span { color: var(--orange); }
+        .hero h1 span {
+            color: var(--orange);
+        }
 
         .hero p {
             font-size: clamp(14px, 2vw, 17px);
-            color: rgba(255,255,255,0.75);
+            color: rgba(255, 255, 255, 0.75);
             max-width: 560px;
             line-height: 1.7;
             margin-bottom: 40px;
@@ -247,21 +393,30 @@
             transition: 0.2s;
             font-family: 'JetBrains Mono', monospace;
         }
-        .btn-primary:hover { background: #e55a25; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(255,107,53,0.4); }
+
+        .btn-primary:hover {
+            background: #e55a25;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+        }
 
         .btn-secondary {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: white;
             padding: 14px 28px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: 0.2s;
             font-family: 'JetBrains Mono', monospace;
         }
-        .btn-secondary:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-2px);
+        }
 
         /* Stats bar */
         .stats-bar {
@@ -273,22 +428,26 @@
             animation: fadeDown 0.7s ease 0.4s both;
         }
 
-        .stat { text-align: center; }
+        .stat {
+            text-align: center;
+        }
+
         .stat-num {
             font-size: 28px;
             font-weight: 700;
             color: var(--orange);
             font-family: 'Space Grotesk', sans-serif;
         }
+
         .stat-label {
             font-size: 11px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             margin-top: 4px;
         }
 
         .stat-divider {
             width: 1px;
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.15);
             align-self: stretch;
         }
 
@@ -343,18 +502,20 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(255,107,53,0.05) 0%, transparent 60%);
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, transparent 60%);
             opacity: 0;
             transition: 0.3s;
         }
 
         .tool-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(255,107,53,0.4);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(255, 107, 53, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .tool-card:hover::before { opacity: 1; }
+        .tool-card:hover::before {
+            opacity: 1;
+        }
 
         .tool-icon {
             font-size: 32px;
@@ -364,9 +525,9 @@
 
         .tool-tag {
             display: inline-block;
-            background: rgba(255,107,53,0.2);
+            background: rgba(255, 107, 53, 0.2);
             color: var(--orange);
-            border: 1px solid rgba(255,107,53,0.3);
+            border: 1px solid rgba(255, 107, 53, 0.3);
             font-size: 10px;
             padding: 3px 10px;
             border-radius: 50px;
@@ -386,7 +547,7 @@
         }
 
         .tool-card p {
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
             font-size: 13px;
             line-height: 1.6;
             margin-bottom: 18px;
@@ -403,12 +564,14 @@
             transition: 0.2s;
         }
 
-        .tool-card:hover .tool-link { gap: 10px; }
+        .tool-card:hover .tool-link {
+            gap: 10px;
+        }
 
         /* Featured card */
         .tool-card.featured {
-            background: linear-gradient(135deg, rgba(255,107,53,0.15) 0%, rgba(42,82,152,0.2) 100%);
-            border-color: rgba(255,107,53,0.35);
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(42, 82, 152, 0.2) 100%);
+            border-color: rgba(255, 107, 53, 0.35);
         }
 
         /* BLOGS GRID */
@@ -432,15 +595,15 @@
 
         .blog-card:hover {
             transform: translateY(-4px);
-            border-color: rgba(255,107,53,0.35);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            border-color: rgba(255, 107, 53, 0.35);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
         }
 
         .blog-tag {
             display: inline-block;
-            background: rgba(255,107,53,0.2);
+            background: rgba(255, 107, 53, 0.2);
             color: var(--orange);
-            border: 1px solid rgba(255,107,53,0.3);
+            border: 1px solid rgba(255, 107, 53, 0.3);
             font-size: 10px;
             padding: 3px 10px;
             border-radius: 50px;
@@ -460,7 +623,7 @@
         }
 
         .blog-card p {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 13px;
             line-height: 1.6;
             margin-bottom: 16px;
@@ -477,7 +640,9 @@
             transition: 0.2s;
         }
 
-        .blog-card:hover .blog-link { gap: 10px; }
+        .blog-card:hover .blog-link {
+            gap: 10px;
+        }
 
         /* WHY SECTION */
         .why-grid {
@@ -496,7 +661,11 @@
             text-align: center;
         }
 
-        .why-icon { font-size: 36px; margin-bottom: 14px; display: block; }
+        .why-icon {
+            font-size: 36px;
+            margin-bottom: 14px;
+            display: block;
+        }
 
         .why-card h3 {
             font-family: 'Space Grotesk', sans-serif;
@@ -509,7 +678,7 @@
         .why-card p {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 13px;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             line-height: 1.6;
         }
 
@@ -520,8 +689,8 @@
         }
 
         .cta-box {
-            background: linear-gradient(135deg, rgba(255,107,53,0.15) 0%, rgba(30,60,114,0.3) 100%);
-            border: 1px solid rgba(255,107,53,0.3);
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(30, 60, 114, 0.3) 100%);
+            border: 1px solid rgba(255, 107, 53, 0.3);
             border-radius: 24px;
             padding: 60px 40px;
             max-width: 700px;
@@ -539,7 +708,7 @@
         .cta-box p {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 15px;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             margin-bottom: 32px;
             line-height: 1.6;
         }
@@ -548,7 +717,7 @@
         .footer {
             position: relative;
             z-index: 1;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding: 30px 20px;
             text-align: center;
         }
@@ -562,25 +731,36 @@
         }
 
         .footer-links a {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
             font-size: 12px;
             transition: 0.2s;
         }
 
-        .footer-links a:hover { color: white; }
+        .footer-links a:hover {
+            color: white;
+        }
 
         .footer-copy {
             font-size: 12px;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255, 255, 255, 0.4);
         }
 
-        .footer-copy span { color: var(--orange); }
+        .footer-copy span {
+            color: var(--orange);
+        }
 
         /* Animations */
         @keyframes fadeDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .fade-in {
@@ -588,7 +768,11 @@
             transform: translateY(24px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* Divider */
         .divider {
@@ -601,37 +785,63 @@
 
         /* Mobile */
         @media (max-width: 480px) {
-            .hamburger { display: flex; }
+            .hamburger {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
                 position: absolute;
-                top: 55px; left: 0;
+                top: 55px;
+                left: 0;
                 width: 100%;
-                background: rgba(15,31,69,0.98);
+                background: rgba(15, 31, 69, 0.98);
                 flex-direction: column;
                 padding: 15px 0;
                 gap: 0;
-                border-top: 1px solid rgba(255,255,255,0.08);
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
             }
-            .nav-links.open { display: flex; }
-            .nav-links a { padding: 12px 25px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 12px 25px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            }
+
             .dropdown-menu {
                 position: static;
                 display: none;
                 box-shadow: none;
-                background: rgba(255,255,255,0.05);
+                background: rgba(255, 255, 255, 0.05);
             }
-            .dropdown-menu a { color: rgba(255,255,255,0.8) !important; }
-            .dropdown-menu a:hover { background: rgba(255,107,53,0.2); color: white !important; }
-            .stat-divider { display: none; }
-            .cta-box { padding: 40px 24px; }
+
+            .dropdown-menu a {
+                color: rgba(255, 255, 255, 0.8) !important;
+            }
+
+            .dropdown-menu a:hover {
+                background: rgba(255, 107, 53, 0.2);
+                color: white !important;
+            }
+
+            .stat-divider {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 40px 24px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- NAVBAR -->
-   <nav class="navbar">
+    <nav class="navbar">
         <div class="nav-logo">
             <a href="/" style="text-decoration:none;">
                 <span class="logo-calc">Calc</span><span class="logo-labz">Labz</span>
@@ -666,7 +876,8 @@
 
         <h1>Free Tools for<br><span>YouTube Creators</span></h1>
 
-        <p>Calculate earnings, download thumbnails, analyze channels — all free tools built specifically for Indian YouTubers in 2026.</p>
+        <p>Calculate earnings, download thumbnails, analyze channels — all free tools built specifically for Indian
+            YouTubers in 2026.</p>
 
         <div class="hero-btns">
             <a href="/youtube-money-calculator/" class="btn-primary">💰 Calculate Earnings</a>
@@ -688,7 +899,7 @@
                 <div class="stat-num">100%</div>
                 <div class="stat-label">Free Forever</div>
             </div>
-            
+
         </div>
     </div>
 
@@ -703,7 +914,8 @@
                 <span class="tool-icon">💰</span>
                 <span class="tool-tag">Most Popular</span>
                 <h3>YouTube Earning Calculator</h3>
-                <p>Calculate your estimated monthly YouTube income based on views, niche, and audience country. India-specific RPM rates included.</p>
+                <p>Calculate your estimated monthly YouTube income based on views, niche, and audience country.
+                    India-specific RPM rates included.</p>
                 <span class="tool-link">Use Tool →</span>
             </a>
 
@@ -711,7 +923,8 @@
                 <span class="tool-icon">🖼️</span>
                 <span class="tool-tag">Free Tool</span>
                 <h3>YouTube Thumbnail Downloader</h3>
-                <p>Download any YouTube video thumbnail in HD quality instantly. Just paste the video URL and get the image.</p>
+                <p>Download any YouTube video thumbnail in HD quality instantly. Just paste the video URL and get the
+                    image.</p>
                 <span class="tool-link">Use Tool →</span>
             </a>
 
@@ -719,7 +932,8 @@
                 <span class="tool-icon">🏷️</span>
                 <span class="tool-tag">Free Tool</span>
                 <h3>YouTube Tag Extractor</h3>
-                <p>Extract tags from any YouTube video. Analyze competitor tags to boost your video SEO and discoverability.</p>
+                <p>Extract tags from any YouTube video. Analyze competitor tags to boost your video SEO and
+                    discoverability.</p>
                 <span class="tool-link">Use Tool →</span>
             </a>
 
@@ -727,7 +941,8 @@
                 <span class="tool-icon">📊</span>
                 <span class="tool-tag">Free Tool</span>
                 <h3>YouTube Channel Analyzer</h3>
-                <p>Analyze any YouTube channel — subscribers, views, estimated earnings, and performance grade. India CPM rates included.</p>
+                <p>Analyze any YouTube channel — subscribers, views, estimated earnings, and performance grade. India
+                    CPM rates included.</p>
                 <span class="tool-link">Use Tool →</span>
             </a>
 
@@ -735,7 +950,8 @@
                 <span class="tool-icon">🔔</span>
                 <span class="tool-tag">Free Tool</span>
                 <h3>Subscribe Link Generator</h3>
-                <p>Generate a direct YouTube subscribe link for your channel. Share it in bios, emails, and descriptions easily.</p>
+                <p>Generate a direct YouTube subscribe link for your channel. Share it in bios, emails, and descriptions
+                    easily.</p>
                 <span class="tool-link">Use Tool →</span>
             </a>
 
@@ -759,14 +975,16 @@
             <a href="/Blogs/5-best-youtube-thumbnail-tips-ctr-2026/" class="blog-card">
                 <span class="blog-tag">Thumbnails</span>
                 <h3>5 YouTube Thumbnail Tips That Actually Double Your CTR in 2026</h3>
-                <p>Proven thumbnail strategies that helped creators 2x their click-through rates. Tip #3 is the most underrated!</p>
+                <p>Proven thumbnail strategies that helped creators 2x their click-through rates. Tip #3 is the most
+                    underrated!</p>
                 <span class="blog-link">Read Article →</span>
             </a>
 
             <a href="/Blogs/youtube-thumbnail-size-guide/" class="blog-card">
                 <span class="blog-tag">Thumbnails</span>
                 <h3>YouTube Thumbnail Size Guide 2026: Exact Pixels for Every Format</h3>
-                <p>Wrong thumbnail size = lost views. Get exact dimensions for YouTube videos, Shorts & Community posts.</p>
+                <p>Wrong thumbnail size = lost views. Get exact dimensions for YouTube videos, Shorts & Community posts.
+                </p>
                 <span class="blog-link">Read Article →</span>
             </a>
 
@@ -784,7 +1002,8 @@
                 <span class="blog-link">Read Article →</span>
             </a>
 
-            <a href="/Blogs/" class="blog-card" style="justify-content: center; align-items: center; display:flex; flex-direction:column; text-align:center; border-style: dashed;">
+            <a href="/Blogs/" class="blog-card"
+                style="justify-content: center; align-items: center; display:flex; flex-direction:column; text-align:center; border-style: dashed;">
                 <span style="font-size:36px; margin-bottom:14px;">📚</span>
                 <h3 style="margin-bottom:8px;">View All 11 Articles</h3>
                 <p>Explore all our YouTube tips, guides and strategies for Indian creators.</p>
@@ -826,7 +1045,8 @@
     <section class="cta-section">
         <div class="cta-box fade-in">
             <h2>Start Using Free Tools Today 🚀</h2>
-            <p>Join thousands of Indian YouTubers who use CalcLabz to track earnings, optimize thumbnails, and grow their channels.</p>
+            <p>Join thousands of Indian YouTubers who use CalcLabz to track earnings, optimize thumbnails, and grow
+                their channels.</p>
             <a href="/youtube-thumbnail-downloader/" class="btn-primary">Download 4k YouTube Thumbnails →</a>
         </div>
     </section>
@@ -866,4 +1086,5 @@
     <script src="navbar.js" defer></script>
 
 </body>
+
 </html>
