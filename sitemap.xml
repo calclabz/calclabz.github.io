@@ -9,6 +9,14 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Youtube Earnings Calculator -->
+  <url>
+    <loc>https://calclabz.github.io/Youtube-income-calculator-2026/</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Thumbnail Downloader -->
   <url>
     <loc>https://calclabz.github.io/youtube-thumbnail-downloader/</loc>
