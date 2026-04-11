@@ -128,6 +128,15 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog List -->
+  <url>
+    <loc>https://calclabz.github.io/Blogs/youtube-thumbnail-mistakes/</loc>
+    <lastmod>2026-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
   <!-- Blogs List -->
   <url>
     <loc>https://calclabz.github.io/Blogs/</loc>
@@ -135,7 +144,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
 
   <!-- About -->
   <url>

@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         'Blogs/youtube-algorithm-2026-guide',
 
-        'Blogs/youtube-subscribe-link-generator-guide'
+        'Blogs/youtube-subscribe-link-generator-guide',
+
+        'Blogs/youtube-thumbnail-seo-guide'
         
     ];
     
