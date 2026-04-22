@@ -52,7 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         'Blogs/youtube-subscribe-link-generator-guide',
 
-        'Blogs/youtube-thumbnail-seo-guide'
+        'Blogs/youtube-thumbnail-seo-guide',
+
+        'Blogs/how-to-increase-youtube-ctr'
         
     ];
     

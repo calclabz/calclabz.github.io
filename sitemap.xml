@@ -120,7 +120,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog List -->
+  <!-- Blog: YouTube Subscribe Link Generator Guide -->
   <url>
     <loc>https://calclabz.github.io/Blogs/youtube-subscribe-link-generator-guide/</loc>
     <lastmod>2026-04-05</lastmod>
@@ -128,10 +128,18 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog List -->
+  <!-- Blog: YouTube Thumbnail Mistakes -->
   <url>
     <loc>https://calclabz.github.io/Blogs/youtube-thumbnail-mistakes/</loc>
     <lastmod>2026-04-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: YouTube Thumbnail Mistakes -->
+  <url>
+    <loc>https://calclabz.github.io/Blogs/how-to-increase-youtube-ctr/</loc>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -144,6 +152,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  
+
 
   <!-- About -->
   <url>
